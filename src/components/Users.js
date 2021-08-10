@@ -15,13 +15,16 @@ class Users extends Component{
 
             return user.isEditing === true ? (
                 
+                    
                 <tr  key={index}>
                     <td><input type="text" ref={(val) => {this.name = val}} required defaultValue={user.name}/></td>
                     <td><input type="number" ref={(val) => {this.age = val}} required defaultValue={user.age}/></td>
                     <td>
                     <input type="button" value="Update" onClick={this.handleUpdate} ref={() => {this.indexNum = index}} className="btn green"/>
                     </td>
-                </tr>  
+                </tr>
+                
+
 
             ) : (
 
@@ -32,10 +35,11 @@ class Users extends Component{
                 </tr>
 
             );
+
         });
 
         return(
-            <table className="striped">
+            <table border='1' className="striped">
                 <thead>
                     <tr>
                     <th>Name</th>
