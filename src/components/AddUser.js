@@ -4,7 +4,7 @@ class AddUser extends Component{
 
     state = {
         name:null,
-        age:null,
+        status:null,
         isEditing:false
     }
     //call addUser (App.js)
@@ -29,7 +29,7 @@ class AddUser extends Component{
                         <input name="name" autoComplete="off" placeholder="Enter your name" required type="text" onChange={ this.updateState} />
                     </div>
                     <div className="input-field col s2">
-                        <input name="age" autoComplete="off" type="number" required placeholder="Enter your age" onChange={ this.updateState } />
+                        <input name="status" autoComplete="off" type="name" required placeholder="Enter your status" onChange={ this.updateState } />
                     </div>
                     <div className="input-field col s2">
                         <input type="submit" value="Add +" className="btn blue"/>

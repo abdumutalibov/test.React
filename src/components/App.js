@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import Users from './Users';
 import AddUser from './AddUser';
 import './App.css'
-class App extends Component{
+class App extends React.Component{
 
-    // Default dummy data
+    //Default dummy data 
     state = {
 
         users:[
-          {name:"Travis Jackson", age:18, isEditing:false},
-          {name:"Linda Moorhouse", age:22, isEditing:false},
-          {name:"Jeffrey Delgado", age:21, isEditing:false}
+          {name:"Jumavoy", status:'cho`pon', isEditing:false},
+          {name:"John Wuick", status:'Killer', isEditing:false},
+          {name:"Leonardo di Caprio", status:'Actor', isEditing:false}
     
         ]
       }
@@ -33,10 +33,10 @@ class App extends Component{
       }
 
       // (i, name, age) is received from Users.js
-      updateUser = (i, name, age) => {
+      updateUser = (i, name, status) => {
         let users = this.state.users;
         users[i].name = name;
-        users[i].age = age;
+        users[i].status = status;
         users[i].isEditing = false;
 
         this.setState({
@@ -57,7 +57,7 @@ class App extends Component{
     render(){
         return(
             <div className="container">
-                <h1>CRUD with React CLI</h1>
+                <h1> React Table</h1>
                 <Users allUsers={this.state.users} pressEditBtn={this.pressEditBtn} updateUser={this.updateUser} pressDelete={this.pressDelete} />
                 <AddUser addUser={this.addUser}/>
             </div>

@@ -4,7 +4,7 @@ class Users extends Component{
 
     // call updateUser (App.js)
     handleUpdate = () => {
-        this.props.updateUser(this.indexNum, this.name.value, this.age.value);
+        this.props.updateUser(this.indexNum, this.name.value, this.status.value);
     }
 
     render(){
@@ -18,7 +18,7 @@ class Users extends Component{
                     
                 <tr  key={index}>
                     <td><input type="text" ref={(val) => {this.name = val}} required defaultValue={user.name}/></td>
-                    <td><input type="number" ref={(val) => {this.age = val}} required defaultValue={user.age}/></td>
+                    <td><input type="text" ref={(val) => {this.status = val}} required defaultValue={user.status}/></td>
                     <td>
                     <input type="button" value="Update" onClick={this.handleUpdate} ref={() => {this.indexNum = index}} className="btn green"/>
                     </td>
@@ -30,7 +30,7 @@ class Users extends Component{
 
                 <tr  key={index}>
                     <td>{user.name}</td>
-                    <td>{user.age}</td>
+                    <td>{user.status}</td>
                     <td><button className="btn white black-text" onClick={() => pressEditBtn(index)}>Edit</button>  |  <button className="btn red" onClick={()=>pressDelete(index)}>Delete</button></td>
                 </tr>
 
@@ -43,7 +43,7 @@ class Users extends Component{
                 <thead>
                     <tr>
                     <th>Name</th>
-                    <th>Age</th>
+                    <th>Status</th>
                     <th>Action</th>
                     </tr>
                 </thead>
