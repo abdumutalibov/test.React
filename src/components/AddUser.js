@@ -33,6 +33,7 @@ class AddUser extends Component{
                     </div>
                     <div className="input-field col s2">
                         <input type="submit" value="Add +" className="btn blue"/>
+                        
                     </div>
                 </form>
             </div>

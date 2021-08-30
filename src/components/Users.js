@@ -9,6 +9,15 @@ class Users extends Component{
 
     render(){
 
+// const add =()=>{
+//     const data ={
+//         name:this.state.name,
+//         status:this.state.status,
+//         id:this.state.users.length+1,
+//     }
+// }
+// const newData =[...this.state.data, users]
+
         const {allUsers, pressEditBtn, pressDelete} = this.props;
 
         const usersList = allUsers.map((user, index) => {
@@ -29,6 +38,7 @@ class Users extends Component{
             ) : (
 
                 <tr  key={index}>
+                    <td>{user.id}</td>
                     <td>{user.name}</td>
                     <td>{user.status}</td>
                     <td><button className="btn white black-text" onClick={() => pressEditBtn(index)}>Edit</button>  |  <button className="btn red" onClick={()=>pressDelete(index)}>Delete</button></td>
@@ -39,9 +49,11 @@ class Users extends Component{
         });
 
         return(
+            
             <table border='1' className="striped">
                 <thead>
                     <tr>
+                        <th>ID</th>
                     <th>Name</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -51,6 +63,7 @@ class Users extends Component{
                     {usersList}
                 </tbody>
             </table>
+            
         );
     }
 }
