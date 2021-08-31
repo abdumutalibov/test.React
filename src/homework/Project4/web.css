@@ -1,0 +1,33 @@
+.boxer{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.box1{
+    display: flex;
+    border: 2px solid gray;
+    width: fit-content;
+}
+.obshiy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    transition: all 0.3s linear;
+}
+button:hover{
+    background-color: rgb(16, 4, 61);
+    color: white;
+}
+input{
+    width: 80px;
+    border:1px solid red;
+}
+input:disabled{
+    border: none;
+}
+table{
+    border-collapse: collapse;
+}
